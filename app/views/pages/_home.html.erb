@@ -2,13 +2,7 @@
   <h1>Welcome to Traider!</h1>
   <p>
     <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
-    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-    <% if user_signed_in? %>
-		Signed in as <%= current_user.name %>. Not you?
-		<%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
-		<% else %>
-		<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-		<% end %>
+		<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
   </p>
 
 </div>
