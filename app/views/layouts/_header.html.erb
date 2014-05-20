@@ -16,7 +16,6 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "About Us", about_path %></li>
-        <li><%= link_to "Forum", 'http://traider.hk/forum' %></li>
         <% if user_signed_in? %>
           <li>
             <%= link_to new_pin_path do %>

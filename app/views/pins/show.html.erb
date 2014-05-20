@@ -7,9 +7,12 @@
 			<%= image_tag @pin.image.url (:medium) %>
 		</div>
 		<div class="panel-body">
-		<p><%= @pin.description %></p>
+		<p> <strong>Description:</strong> <%= @pin.description %></p>
+		<p> <strong>Price:</strong> <%= @pin.price %></p>
+    <p> <strong>Location:</strong> <%= @pin.location %></p>
 		<p><strong><%= @pin.user.name if @pin.user %></strong></p>
-		<p><%= @pin.email %></p>
+		<p> <strong>Email:</strong> <%= @pin.email %></p>
+
 
 		
 				<% if @pin.user == current_user %>
