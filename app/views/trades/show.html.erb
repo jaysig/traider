@@ -1,0 +1,28 @@
+<%= link_to 'Back', trades_path %>
+
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+    <div class="panel-heading center">
+      <%= image_tag @trade.image.url (:medium) %>
+    </div>
+    <div class="panel-body">
+    <p> <strong>Description:</strong> <%= @trade.description %></p>
+    <p> <strong>Price:</strong> <%= @trade.price %></p>
+    <p> <strong>Location:</strong> <%= @trade.location %></p>
+    <p><strong><%= @trade.user.name if @trade.user %></strong></p>
+    <p> <strong>Email:</strong> <%= @trade.email %></p>
+
+
+    
+        <% if @trade.user == current_user %>
+          <%= link_to edit_trade_path(@trade) do %>
+            <span class="glyphicon glyphicon-edit"></span>
+            Edit
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>
