@@ -32,6 +32,7 @@
              <% end %>
           </li>
           <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to  "sign out as admin", destroy_admin_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "Sign In", new_user_session_path %></li>
         <% end %>

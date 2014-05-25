@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  devise_for :admin, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   resources :trades
 
   resources :pins
