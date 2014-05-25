@@ -10,7 +10,7 @@
         <p><%= trade.location %></p>
         <p><strong><%= trade.user.name if trade.user %></strong></p>
         
-        <% if current_user && (trade.user == current_user) %>
+        <% if (current_user && (trade.user == current_user)) %>
           <div class="actions">
              <%= link_to edit_trade_path(trade) do %>
               <span class="glyphicon glyphicon-edit"></span>
